@@ -1,0 +1,146 @@
+:focus {
+	outline: none;
+}
+
+* {
+	box-sizing: border-box;
+	outline: none;
+	margin: 0;
+	padding: 0;
+	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+		"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+body {
+	background: #fafafa;
+}
+
+/* login & Register*/
+
+.center {
+	width: 100%;
+	height: auto;
+	margin: 50px auto 15px;
+}
+
+.center,
+.bottom {
+	max-width: 350px;
+	background: #fff;
+	border: 1px solid #e6e6e6;
+	padding: 40px 40px 20px;
+	border-radius: 1px;
+}
+
+.bottom {
+	margin: 0 auto;
+	padding: 25px 40px;
+	text-align: center;
+	color: #262626;
+}
+.bottom a {
+	color: #3897f0;
+}
+
+.logo img {
+	width: 160px;
+}
+
+input {
+	display: block;
+	width: 100%;
+	background: #fafafa;
+	border: 1px solid #efefef;
+	font-size: 12px;
+	border-radius: 3px;
+	color: #262626;
+	padding: 10px;
+	margin: 10px 0;
+}
+
+input:focus {
+	border: 1px solid #b2b2b2;
+}
+
+.anchor i {
+	color: #fff;
+	padding: 0 6px;
+}
+
+.anchor {
+	text-decoration: none !important;
+	color: #fff;
+	width: 100vw;
+	margin: 5px 0;
+	background-color: #3897f0;
+	border: 1px solid #3897f0;
+	border-radius: 4px;
+	text-align: center;
+	padding: 5px 45px;
+}
+
+.anchor:hover {
+	color: #fff;
+}
+
+.btn1 {
+	color: #fff;
+	width: 100%;
+	margin: 5px 0;
+	background-color: #3897f0;
+	border: 1px solid #3897f0;
+	border-radius: 4px;
+	text-align: center;
+	padding: 5px;
+}
+
+hr {
+	background: #b2b2b2;
+	color: #b2b2b2;
+	border-width: 0;
+	height: 1.5px;
+}
+
+.dif .fb {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.dif .fb img {
+	width: 16px;
+	height: 16px;
+}
+
+.dif .fb p {
+	padding-top: 10px;
+	color: #385185;
+	font-weight: 500;
+	margin-left: 10px;
+}
+
+.dif .forgot {
+	font-size: 12px;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.dif .forgot a {
+	color: #003569;
+}
+
+.p1 {
+	color: rgba(var(--f52, 142, 142, 142), 1);
+	font-size: 1.5rem;
+	font-weight: 600;
+	padding: 0 1rem 1rem;
+}
+
+.reg-center {
+	padding-top: 5px;
+}
+
+.bottom1 {
+	padding: 1rem;
+	margin-bottom: 1rem;
+}

@@ -1,0 +1,32 @@
+{{!-- including header --}}
+{{>header}}
+
+<div class="main text-center">
+    <div class="center">
+        <div class="logo">
+            <img src="/images/2.png" alt="logo">
+        </div>
+        <form action="/login" method="POST">
+            <input type=" text" name="email" placeholder="Email">
+            <input type="password" name="password" placeholder=" Password">
+            <button class=" btn1" type="submit">Log In</button>
+        </form>
+        <hr>
+        <div class="dif">
+            <div class="fb">
+                <img src="/images/facebook.png" alt="facebook">
+                <p>Log in with Facebook</p>
+            </div>
+            <div class="forgot">
+                <a href="#">Forgot password?</a>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <span>Don't have an account?</span>
+        <a href="/register">Sign Up</a>
+    </div>
+</div>
+
+{{!-- including footer --}}
+{{>footer}}

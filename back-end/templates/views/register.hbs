@@ -1,0 +1,27 @@
+{{!-- including header --}}
+{{>header}}
+
+<div class="main text-center">
+    <div class="center reg-center">
+        <div class="logo">
+            <img src="/images/2.png" alt="logo">
+        </div>
+        <p class="p1">Sign up to see photos and videos from your friends.</p>
+        <a class="anchor" href="#"><i class="fab fa-facebook-square"></i>Log in with Facebook</a>
+        <hr>
+        <form action="/register" method="POST">
+            <input type="text" name='email' placeholder="Email">
+            <input type="text" name='name' placeholder="Full Name">
+            <input type="text" name='username' placeholder="Username">
+            <input type="password" name='password' placeholder="Password">
+            <button class="btn1" type="submit">Sign Up</button>
+        </form>
+    </div>
+    <div class="bottom bottom1">
+        <span>Have an account?</span>
+        <a href="/login">Log In</a>
+    </div>
+</div>
+
+{{!-- including footer --}}
+{{>footer}}
