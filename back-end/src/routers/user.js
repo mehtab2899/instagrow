@@ -1,5 +1,8 @@
+// requiring modules
 const express = require("express"),
 	User = require("../models/registers"),
+	bcrypt = require("bcryptjs"),
+	jwt = require("jsonwebtoken"),
 	router = new express.Router();
 
 // login methods and rendering
@@ -12,9 +15,17 @@ router.post("/login", async (req, res) => {
 		const email = req.body.email,
 			password = req.body.password;
 
+		// finding user from db
 		const userLogin = await User.findOne({ email });
 
-		if (userLogin.password === password) {
+		// compare password from db
+		const isMatch = await bcrypt.compare(password, userLogin.password);
+
+		// generation token for login
+		const token = await userLogin.generateTokens();
+
+		// matching the user credentials
+		if (isMatch) {
 			res.status(201).render("index");
 		} else {
 			res.send("Invalid login details!");
@@ -42,6 +53,11 @@ router.post("/register", async (req, res) => {
 			username: username,
 			password: password,
 		});
+
+		// token generation f'n calling
+		const token = await user.generateTokens();
+
+		// saving user details to db
 		const registered = await user.save();
 		res.status(201).render("index");
 	} catch (error) {

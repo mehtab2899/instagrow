@@ -1,4 +1,5 @@
 // requiring modules from npm
+require("dotenv").config();
 const express = require("express"),
 	hbs = require("hbs"),
 	userRouter = require("./src/routers/user"),
