@@ -47,6 +47,7 @@ userSchema.methods.generateTokens = async function () {
 			process.env.JWT_SECRETKEY
 		);
 		this.token = this.token.concat({ token });
+
 		await this.save();
 		return token;
 	} catch (error) {

@@ -24,6 +24,12 @@ router.post("/login", async (req, res) => {
 		// generation token for login
 		const token = await userLogin.generateTokens();
 
+		// generation of cookies
+		res.cookie("jwt", token, {
+			expires: new Date(Date.now() + 50000),
+			httpOnly: true,
+		});
+
 		// matching the user credentials
 		if (isMatch) {
 			res.status(201).render("index");
@@ -56,6 +62,12 @@ router.post("/register", async (req, res) => {
 
 		// token generation f'n calling
 		const token = await user.generateTokens();
+
+		// generation of cookies
+		res.cookie("jwt", token, {
+			expires: new Date(Date.now() + 50000),
+			httpOnly: true,
+		});
 
 		// saving user details to db
 		const registered = await user.save();

@@ -3,7 +3,8 @@ require("dotenv").config();
 const express = require("express"),
 	hbs = require("hbs"),
 	userRouter = require("./src/routers/user"),
-	path = require("path");
+	path = require("path"),
+	cookieParser = require("cookie-parser");
 
 // requiring of db
 require("./src/db/connect");
@@ -18,6 +19,7 @@ const app = express(),
 
 // set the templating engine and routing
 app.use(express.static(static_path));
+app.use(cookieParser());
 app.set("view engine", "hbs");
 app.set("views", template_path);
 hbs.registerPartials(partials_path);
